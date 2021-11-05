@@ -1,0 +1,44 @@
+name: daniknews
+description: Short video news app.
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.2+3
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.2
+
+  firebase_core: ^1.6.0
+  firebase_auth: ^3.1.4
+  cloud_firestore: ^2.5.4
+  firebase_storage: ^10.0.6
+  google_sign_in: ^5.2.0
+  google_fonts:
+
+  image_picker: ^0.8.4+3
+  video_player: ^2.2.5
+  shared_preferences: ^2.0.8
+  #cached_video_player: ^1.0.3
+  cached_network_image: ^3.1.0
+
+
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.4
+
+flutter:
+
+  uses-material-design: true
+
+  # To add assets to your application, add an assets section, like this:
+  assets:
+    - assets/
