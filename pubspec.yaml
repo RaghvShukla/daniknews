@@ -14,16 +14,19 @@ dependencies:
 
   firebase_core: ^1.6.0
   firebase_auth: ^3.1.4
-  cloud_firestore: ^2.5.4
+  cloud_firestore: ^3.1.0
   firebase_storage: ^10.0.6
   google_sign_in: ^5.2.0
   google_fonts:
 
   image_picker: ^0.8.4+3
-  video_player: ^2.2.5
   shared_preferences: ^2.0.8
-  #cached_video_player: ^1.0.3
   cached_network_image: ^3.1.0
+  #flutter_vlc_player: ^6.0.5
+  stacked: ^2.2.7
+  get_it: ^7.2.0
+  stacked_services: ^0.8.15
+  video_player: ^2.2.7
 
 
 

@@ -1,7 +1,6 @@
 import 'dart:io';
-import 'package:daniknews/upload/news_tag_page.dart';
 import 'package:daniknews/upload/article/pick_file.dart';
-import 'package:daniknews/upload/video/upload_screen.dart';
+import 'package:daniknews/upload/video/upload_video_page.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -39,15 +38,7 @@ class _LibraryPageState extends State<LibraryPage> {
       drawer: Drawer(
         child: ListView(
           children: [
-            ElevatedButton(
-                onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                        builder: (context) => const NewsTagPage()),
-                  );
-                },
-                child: const Text("choice chips")),
+
             ElevatedButton(
                 onPressed: () {
                   Navigator.push(
@@ -71,7 +62,7 @@ class _LibraryPageState extends State<LibraryPage> {
                     (value) => Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => UploadScreen(image, title),
+                        builder: (context) => UploadVideoPage(image, title),
                       ),
                     ),
                   );

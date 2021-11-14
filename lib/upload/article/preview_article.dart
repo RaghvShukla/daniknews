@@ -1,11 +1,10 @@
 import 'dart:io';
-import 'package:daniknews/homepage/upload_page.dart';
+import 'package:daniknews/homepage/homepage.dart';
 import 'package:daniknews/main.dart';
 import 'package:daniknews/upload/article/upload_article_page.dart';
 import 'package:daniknews/upload/article/write_article_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:image_picker/image_picker.dart';
 
@@ -17,6 +16,7 @@ class PreviewArticle extends StatefulWidget {
       required this.headline,
       required this.description})
       : super(key: key);
+
   final File? image;
   final String title;
   final String headline;
@@ -257,7 +257,7 @@ class _PreviewArticleState extends State<PreviewArticle> {
                         Navigator.pushReplacement(
                             context,
                             MaterialPageRoute(
-                                builder: (context) => UploadPage()));
+                                builder: (context) => Homepage()));
                       },
                       child: Text('cancel'),
                       style: OutlinedButton.styleFrom(
@@ -272,16 +272,25 @@ class _PreviewArticleState extends State<PreviewArticle> {
                     width: size.width / 2 - 20,
                     child: ElevatedButton(
                       onPressed: () {
-                        Navigator.pushReplacement(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => UploadArticlePage(
-                                image: image,
-                                title: timeStamp.toString(),
-                                headline: widget.headline,
-                                description: widget.description),
-                          ),
-                        );
+                        if (image != null && title!.isNotEmpty) {
+                          Navigator.pushReplacement(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => UploadArticlePage(
+                                  image: image,
+                                  title: timeStamp.toString(),
+                                  headline: widget.headline,
+                                  description: widget.description),
+                            ),
+                          );
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text("please add image to continue"),
+                              backgroundColor: reddish,
+                            ),
+                          );
+                        }
                       },
                       child: Text('Next'),
                       style: ElevatedButton.styleFrom(

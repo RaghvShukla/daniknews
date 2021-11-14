@@ -1,5 +1,5 @@
 import 'package:daniknews/upload/article/write_article_page.dart';
-import 'package:daniknews/upload/video/upload_screen.dart';
+import 'package:daniknews/upload/video/upload_video_page.dart';
 import 'package:image_picker/image_picker.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
@@ -24,7 +24,7 @@ class _UploadPageState extends State<UploadPage> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => UploadScreen(image, title!),
+          builder: (context) => UploadVideoPage(image, title!),
         ),
       );
 
@@ -45,7 +45,7 @@ class _UploadPageState extends State<UploadPage> {
       Navigator.push(
         context,
         MaterialPageRoute(
-          builder: (context) => UploadScreen(image, title!),
+          builder: (context) => UploadVideoPage(image, title!),
         ),
       );
 

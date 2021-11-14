@@ -1,13 +1,8 @@
-import 'package:daniknews/auth/login_page.dart';
-import 'package:daniknews/auth/select_category_page.dart';
 import 'package:daniknews/homepage/homepage.dart';
 import 'package:daniknews/services/user_preferences.dart';
-import 'package:daniknews/upload/article/preview_article.dart';
-import 'package:daniknews/upload/article/write_article_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'auth/auth_service.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() async {
@@ -15,7 +10,6 @@ void main() async {
   await Firebase.initializeApp();
   await UserPreferences.init();
 
-  SystemChrome.latestStyle;
   SystemChrome.setSystemUIOverlayStyle(const SystemUiOverlayStyle(
     statusBarColor: reddish,
     systemNavigationBarColor: Colors.transparent,
@@ -40,6 +34,10 @@ class DanikNews extends StatelessWidget {
         );
   }
 }
+
+
+
+
 
 const MaterialColor reddish = MaterialColor(
   0xFFC62828,

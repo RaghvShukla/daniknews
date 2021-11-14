@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:image_picker/image_picker.dart';
 import 'dart:io';
-import '../news_tag_page.dart';
 
 class PickImage extends StatefulWidget {
   const PickImage({Key? key}) : super(key: key);
@@ -36,7 +35,7 @@ class _PickImageState extends State<PickImage> {
           image != null ? Image.file(image!) : FlutterLogo(),
           const SizedBox(
             height: 200,
-            child: NewsTagPage(),
+            child: Text("news")//NewsTagPage(),
           )
         ],
       ),

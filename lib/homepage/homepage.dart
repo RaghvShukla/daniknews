@@ -1,7 +1,6 @@
 import 'package:daniknews/homepage/library_page.dart';
 import 'package:daniknews/homepage/video_page.dart';
 import 'package:flutter/material.dart';
-//import 'home.dart';
 import 'upload_page.dart';
 import 'article_screen.dart';
 import 'explore_screen.dart';
@@ -24,12 +23,10 @@ class _HomepageState extends State<Homepage> {
 
   static List<Widget> buildTabBar = <Widget>[
     VideoPage(),
-    //HomePage(),
     ExploreScreen(),
     UploadPage(),
     ArticleScreen(),
     LibraryPage(),
-    //UploadPage()
   ];
 
   @override

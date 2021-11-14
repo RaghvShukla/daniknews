@@ -1,4 +1,4 @@
-import 'package:daniknews/homepage/upload_page.dart';
+import 'package:daniknews/homepage/homepage.dart';
 import 'package:daniknews/main.dart';
 import 'package:daniknews/upload/article/preview_article.dart';
 import 'package:flutter/material.dart';
@@ -35,7 +35,7 @@ class _WriteArticlePageState extends State<WriteArticlePage> {
               onPressed: () {
                 Navigator.pushAndRemoveUntil(
                     context,
-                    MaterialPageRoute(builder: (context) => UploadPage()),
+                    MaterialPageRoute(builder: (context) => Homepage()),
                     (Route<dynamic> route) => false);
               },
               child: Text("cancel"),
